@@ -259,7 +259,7 @@ h4{
                 qrID = qrMapping[candidateEmail];
             } else {
                 let counter = localStorage.getItem('generatedID') ? parseInt(localStorage.getItem('generatedID')) : 1;
-                const prefix = 'ABC';
+                const prefix = 'ATS';
                 const fixed = '012';
                 const Part = String(counter).padStart(3, '0');
                 qrID = `${prefix}${fixed}${Part}`;
