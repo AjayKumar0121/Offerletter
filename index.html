@@ -118,6 +118,71 @@
     </style>
 </head>
 <body>
+   
+    <div class="form-container">
+        <div class="heading"><h1>Offer Letter Form</h1></div>
+        <div class="forms">
+            <form id="offerLetterForm">
+                <div id="personalDetails" class="section active">
+              
+                    <label for="FullName">Full Name</label>
+                    <input type="text" placeholder="Full Name" id="fullName" minlength="4" maxlength="60" required  pattern="^[A-Za-z]+(?:\.[A-Za-z]+)*(?: [A-Za-z]+)*(?:\.[A-Za-z]+){0,3}$" 
+                    title="Username cannot start with a space, no consecutive spaces allowed, maximum 8 spaces and 3 periods allowed.">
+                    
+                    
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Email Address" id="email" minlength="5" maxlength="50" required>
+                    
+                    <label for="Branch Location">Branch Location</label>
+                    <input type="text" placeholder="Branch Location" id="location" required minlength="4" maxlength="30" pattern="^[A-Za-z]+(?:\.[A-Za-z]+)*(?: [A-Za-z]+)*(?:\.[A-Za-z]+){0,3}$"  title="Only alphabetic characters and spaces are allowed">
+                    
+
+                    <label for="jobrole">Job Role</label>
+                    <input type="text" placeholder="Job Role" id="jobrole" minlength="4" maxlength="30" required pattern="^[A-Za-z]+(?:\.[A-Za-z]+)*(?: [A-Za-z]+)*(?:\.[A-Za-z]+){0,3}$"  title="Enter Valid Job Role.">
+                    
+                 
+
+                    <div class="button-container">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+    
+             
+            </form>
+        </div>
+    </div>
+ 
+    <script>
+        function isValidEmail(email) {
+            return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/.test(email);
+        }
+    
+        document.getElementById("offerLetterForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            let fullName = document.getElementById("fullName").value;
+            let candidateEmail = document.getElementById("email").value;
+            let jobRole = document.getElementById("jobrole").value;  
+            let location = document.getElementById("location").value;
+    
+            
+            if (!isValidEmail(candidateEmail)) {
+                alert("Please enter a valid email address.");
+                return;  
+            }
+    
+            localStorage.setItem("fullName", fullName);
+            localStorage.setItem("email", candidateEmail);
+            localStorage.setItem("jobrole", jobRole);
+            localStorage.setItem("location", location);
+    
+            alert("Data Saved Successfully!");
+    
+            window.location.href = "Offer Letter.html";
+        });
+    </script>
+    
+    
+
     <div class="container">
         <script>
             for (let i = 0; i < 100; i++) {
@@ -145,55 +210,5 @@
             window.onload = simulateHoverEffect;
         </script>
     </div>
-    <div class="form-container">
-        <div class="heading"><h1>Offer Letter Form</h1></div>
-        <div class="forms">
-            <form id="offerLetterForm">
-                <div id="personalDetails" class="section active">
-              
-                    <label for="FullName">Full Name</label>
-                    <input type="text" placeholder="Full Name" id="fullName" required>
-                    
-                    <label for="email">Email</label>
-                    <input type="email" placeholder="Email Address" id="email" required>
-                    
-                    <label for="Branch Location">Branch Location</label>
-                    <input type="text" placeholder="Branch Location" id="location" required>
-                    
-                    <label for="jobrole">Job Role</label>
-                    <input type="text" placeholder="Job Role" id="jobrole" required>
-                    
-                 
-
-                    <div class="button-container">
-                        <button type="submit">Submit</button>
-                    </div>
-                </div>
-    
-             
-            </form>
-        </div>
-    </div>
-    
-    <script>
-        document.getElementById("offerLetterForm").addEventListener("submit", function(event) {
-            event.preventDefault(); 
-            let fullName = document.getElementById("fullName").value;
-    let candidateEmail = document.getElementById("email").value;
-    let jobRole = document.getElementById("jobrole").value;  
-    let location = document.getElementById("location").value; 
-
-    
-    localStorage.setItem("fullName", fullName);
-    localStorage.setItem("email", candidateEmail);
-    localStorage.setItem("jobrole", jobRole);
-    localStorage.setItem("location", location);
-    
-            alert("Data Saved Successfully!");
-    
-            window.location.href = "Offer Letter.html";
-        });
-    </script>
-    
 </body>
 </html>
