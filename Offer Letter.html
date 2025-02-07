@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Letter</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            margin: 40px auto;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            overflow: auto;
+            width: 90%;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+            padding: 20px;
+        
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background-color: #020b85;
+            border-radius:10px ;
+            padding: 1px;
+        }
+        .header h1 {
+            color: #ffffff;
+            font-size: xx-large;
+        }
+        .header p {
+            color: #777;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+        
+        .to-address {
+            margin-top: 120px;
+            padding-right: 20px;
+            font-size: 28px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 50px;
+            margin-bottom: 50px;
+        }
+        .to-address p {
+            margin: 5px 0;
+        }
+        .date{
+            padding-bottom: 60px;
+            font-size: 30px;
+        }
+        .Candidate-name{
+            font-size: 32px;
+            padding-bottom: 10px;
+            color: rgb(103, 50, 4);
+        }
+        .company-address {
+            margin-top: 150px;
+            padding-right: 20px;
+            font-size: 28px;
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            margin-left: 50px;
+            margin-bottom: 50px;
+        }
+        .company-address p {
+            margin: 5px 0;
+        }
+        .img-container1 {
+            display: flex;
+            justify-content: flex-end;
+        }
+        .logo{
+            width: 300px;
+            height: 150px;
+        }
+        .qr-section{
+            display: flex;
+            justify-content: space-between;
+            flex-direction: row;
+
+        }
+        #qr-code {
+            margin-left: 100px;
+            margin-top: 180px;
+            width: 150px;
+            height: 150px;
+        }
+        p {
+    margin-top: 0; 
+    margin-bottom: 10px; 
+    line-height: 1.4;
+}
+h4{
+    margin-top: 30px;
+    margin-bottom: 10px;
+    line-height: 1.4;
+
+}
+.name{
+    font-size: 32px;
+    color: navy;
+}
+
+        .body-text {
+            font-size: 26px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-left: 120px;
+            margin-right: 20px;
+            color: #333;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .offer-details {
+            margin-top: 10px;
+            display: flex;
+            margin-right: 20px;
+            flex-direction: column;
+            justify-content: flex-start;
+            margin-left: 120px;
+            font-size: 26px;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;    
+        }
+        footer {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    padding: 20px 0;
+    background-color: rgba(250, 250, 255, 0.507);
+}
+
+.footer-section {
+    text-align: center;
+    margin: 0 20px;
+    font-size: 22px;
+}
+
+.footer-section i {
+    font-size: 40px;
+    color:  rgb(2, 105, 196);
+    margin-bottom: 10px;
+}
+
+.footer-section p {
+  
+    margin: 0;
+}
+.footer-section a {
+    text-decoration: none;
+    color: black;
+}
+     
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Offer Letter</h1>
+        </div>
+
+        <div class="main-content">
+            <div class="to-address">
+                <p class="date"><strong>Date:</strong><span id="date">06-02-2025</span></p>
+                    <p class="Candidate-name"><strong id="candidateName">Candidate Name</strong></p>
+                    <p>1/1234, Jubilee Hills</p>
+                <p>Hyderabad, Telangana 500033, India</p>
+                <p>Mobile:+91 9087654321</p>
+            </div>
+            <div class="img-container1">
+                <img class="logo" src="ATS_Wallpaper_logo-removebg-preview (1).png" alt="Company Logo">
+            </div>
+        </div>
+
+        <div class="body-text">
+            <p>Dear <span id="candidateName1">Candidate Name</span>,</p>
+            <p>With reference to your application and subsequent tests interviews you had with us, we 
+             are pleased to offer you the position of <strong style="color: rgb(58, 4, 107);" id="jobrole">Developer</strong> at <strong style="color: #020b85;">Astrolite Tech Solutions Pvt Ltd</strong> 
+             <span id="location">Hyderabad</span> Location.</p>
+
+             <h4>Annual Compensation</h4>
+             <p>you will communicated separately regarding roles and responsibilities based on your performance and sepcialization
+                at the discretion of management from time to time. Yout annual cost to company is Rs. 4,00,000/- (Rupees Four Lakh only)</p>
+             </p>
+            </div>
+
+        <div class="offer-details">
+            <h4>Date of Reporting</h4>
+            <p>You are required to report at the office of <strong style="color: #020b85;">Astrolite Tech Solutions Pvt Ltd</strong> <span id="location1">Hyderabad</span> on or before
+            <strong>10th February 2025.</strong>The terms of this offer are strictly confidential Between You and <strong style="color: #020b85;">Astrolite Tech Solutions Pvt Ltd.</strong></p>
+        </div>
+
+        <div class="body-text">
+            <p></p> 
+        </div>
+
+            <div class="qr-section">
+            
+                <div id="qr-code"></div>
+
+                <div class="company-address">
+                    <p class="name"><strong>Astrolite Tech Solutions Pvt Ltd</strong></p>
+                    <p>Plot No 65,Flat No 201, 2nd Floor, <br>Siddivinayaka Nagar, <br>
+                    Survey of India Colony, <br>
+                    Madhapur, Hyderabad-081</p>
+                    <p>Phone: 123-456-7890</p>
+                </div>
+            
+        </div>
+            <footer class="footer">
+                <div class="footer-section">
+                    <i class="fa-solid fa-phone"></i>
+                    <p class="info"><hr>+91 9012345678</p>
+                </div>
+                <div class="footer-section">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p><hr>Plot No 65, Flat No 201, 2nd Floor, Survey Of India Ayyappa Society <br>  Madhapur, Hyderabad, Telangana 500081</p>
+
+                </div>
+                <div class="footer-section">
+                    <i class="fa-solid fa-envelope"></i>
+                    <p><hr><a href="https://www.astrolitetech.com/">info@astrolitetech.com</a></p>                    
+                </div>
+            </footer>
+    </div>
+    <script src="https://cdn.rawgit.com/davidshimjs/qrcodejs/gh-pages/qrcode.min.js"></script>
+    <script>
+        let candidateEmail = localStorage.getItem("email");
+        let candidateName = localStorage.getItem("fullName");
+        let branchlocation = localStorage.getItem("location");
+        let jobrole = localStorage.getItem("jobrole");
+
+        
+        document.getElementById("candidateName").textContent = candidateName;
+        document.getElementById("candidateName1").textContent = candidateName;
+        document.getElementById("location").textContent = branchlocation;
+        document.getElementById("location1").textContent = branchlocation;
+        document.getElementById("jobrole").textContent = jobrole;
+
+
+        if (candidateEmail) {
+            let qrMapping = JSON.parse(localStorage.getItem("qrMapping")) || {};
+            let qrID;
+    
+            if (qrMapping[candidateEmail]) {
+                qrID = qrMapping[candidateEmail];
+            } else {
+                let counter = localStorage.getItem('generatedID') ? parseInt(localStorage.getItem('generatedID')) : 1;
+                const prefix = 'ABC';
+                const fixed = '012';
+                const Part = String(counter).padStart(3, '0');
+                qrID = `${prefix}${fixed}${Part}`;
+    
+                qrMapping[candidateEmail] = qrID;
+                localStorage.setItem("qrMapping", JSON.stringify(qrMapping));
+    
+                counter++;
+                localStorage.setItem('generatedID', counter);
+            }
+    
+            new QRCode(document.getElementById("qr-code"), qrID);
+        } else {
+            document.getElementById("qr-code").textContent = "No email found!";
+        }
+    
+        const today = new Date();
+        const todayDate = today.toLocaleDateString('en-IN', {
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        });
+    
+        document.getElementById('date').textContent = todayDate;
+    </script>
+    
+    
+</body>
+</html>

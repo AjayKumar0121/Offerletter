@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Offer Letter Form</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body, html {
+            height: 100%;
+            width: 100%;
+            overflow: auto;
+            margin: 0;
+            background: rgb(255, 255, 255);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Poppins', sans-serif;
+        }
+        .container {
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            width: 100vw;
+            height: 100vh;
+            position: absolute;
+            gap: 0;
+        }
+        .tile {
+            background-image: url('./ATS_Wallpaper_logo-removebg-preview (2) (1) (1).png');
+            background-size: cover;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            transition: background-image 0.2s ease;
+        }
+        .tile.hovered {
+            background-image: url('./ATS_Wallpaper_logo-removebg-preview.png');
+        }
+        .form-container {
+            background: linear-gradient(rgba(222, 222, 255, 0.443), rgb(220, 234, 255));
+            width: 70%;
+            max-height: 600px;
+            margin-bottom: 50px;
+            margin-top: 100px;
+            background-color: white;
+            padding-left: 50px;
+            padding-right: 50px;
+            padding-bottom: 30px;
+            padding-top: 30px;
+            border-radius: 20px;
+            position: relative;
+            z-index: 1;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .heading h1 {
+            text-align: center;
+            color: #000000;
+            font-size: 30px;
+        }
+
+        .forms {
+            margin-top: 20px;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 20px;
+            margin-left: 10px;
+            font-weight: bold;
+
+        }
+
+        input {
+            width: 98%;
+            padding: 18px;
+            margin-top: 5px;
+            font-size: 20px;
+            border: 1px solid #cacaca;
+            border-radius: 5px;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .button-container button {
+            background: linear-gradient(135deg, #00e5ff, #0800ff);
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            width: 300px;
+            border-radius: 8px;
+            font-size: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+        .button-container button:hover {
+            background: linear-gradient(135deg, #004cff,#00f2ff);
+            transform: scale(1.05);
+        }
+
+        .button-container button:active {
+            transform: scale(0.95);
+        }
+       
+    </style>
+</head>
+<body>
+    <div class="container">
+        <script>
+            for (let i = 0; i < 100; i++) {
+                const tile = document.createElement('div');
+                tile.classList.add('tile');
+                document.querySelector('.container').appendChild(tile);
+            }
+            const sequence = [8, 29, 57, 7, 16, 42, 88, 10, 19, 32, 68, 99, 78, 59, 48, 1, 37, 65, 13, 41, 54, 85, 64, 50, 66, 60, 45, 28, 43, 4, 55, 78, 38, 25, 80, 24, 49, 26, 58, 17, 9, 72, 77, 23, 11, 36, 15, 71, 61, 70, 30, 63, 62, 40, 20, 67, 33, 52, 44, 51, 31, 27, 82, 7, 14, 59, 39, 22, 83, 18, 73, 12, 34, 53, 46, 35, 76, 8, 3, 2, 69, 21, 5, 81, 47, 10, 79, 18, 34, 56];
+            function simulateHoverEffect() {
+                const tiles = document.querySelectorAll('.tile');
+                let index = 0;
+                const interval = setInterval(() => {
+                    if (index < sequence.length) {
+                        const tileIndex = sequence[index] - 1;
+                        tiles[tileIndex].classList.add('hovered');
+                        setTimeout(() => {
+                            tiles[tileIndex].classList.remove('hovered');
+                        }, 1200);
+                        index++;
+                    } else {
+                        clearInterval(interval);
+                    }
+                }, 1200);
+            }
+            window.onload = simulateHoverEffect;
+        </script>
+    </div>
+    <div class="form-container">
+        <div class="heading"><h1>Offer Letter Form</h1></div>
+        <div class="forms">
+            <form id="offerLetterForm">
+                <div id="personalDetails" class="section active">
+              
+                    <label for="FullName">Full Name</label>
+                    <input type="text" placeholder="Full Name" id="fullName" required>
+                    
+                    <label for="email">Email</label>
+                    <input type="email" placeholder="Email Address" id="email" required>
+                    
+                    <label for="Branch Location">Branch Location</label>
+                    <input type="text" placeholder="Branch Location" id="location" required>
+                    
+                    <label for="jobrole">Job Role</label>
+                    <input type="text" placeholder="Job Role" id="jobrole" required>
+                    
+                 
+
+                    <div class="button-container">
+                        <button type="submit">Submit</button>
+                    </div>
+                </div>
+    
+             
+            </form>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById("offerLetterForm").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+            let fullName = document.getElementById("fullName").value;
+    let candidateEmail = document.getElementById("email").value;
+    let jobRole = document.getElementById("jobrole").value;  
+    let location = document.getElementById("location").value; 
+
+    
+    localStorage.setItem("fullName", fullName);
+    localStorage.setItem("email", candidateEmail);
+    localStorage.setItem("jobrole", jobRole);
+    localStorage.setItem("location", location);
+    
+            alert("Data Saved Successfully!");
+    
+            window.location.href = "Offer Letter.html";
+        });
+    </script>
+    
+</body>
+</html>
